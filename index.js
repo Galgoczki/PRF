@@ -11,10 +11,11 @@ const session = require('express-session')
 const passport = require('passport')
 const localStrategy = require('passport-local').Strategy
 
+const port = process.env.PORT || 3000
 
 const whitelist = ['https://ltps80-prf2021.web.app', 
 'https://ltps80-prf2021.firebaseapp.com', 
-'http://localhost:4200','http://localhost:3000','https://ltps80-prf2021.herokuapp.com/'];
+'http://localhost:4200','http://localhost:3000','http://localhost:'+port,'https://ltps80-prf2021.herokuapp.com/'];
 
 var corsOptions = {
     origin: function (origin, callback) {
@@ -29,7 +30,6 @@ var corsOptions = {
     'Origin', 'Accept']
   };
 
-const port = process.env.PORT || 3000
 app.use(cors(corsOptions));
 
 const dbUrl= 'mongodb+srv://'+ process.env.mongo+'@cluster0.6o0hj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'

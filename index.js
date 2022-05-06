@@ -12,8 +12,8 @@ const passport = require('passport')
 const localStrategy = require('passport-local').Strategy
 
 
-const whitelist = ['https://<project_id>.web.app', 
-'https://<project_id>.firebaseapp.com', 
+const whitelist = ['https://ltps80-prf2021.web.app', 
+'https://ltps80-prf2021.firebaseapp.com', 
 'http://localhost:4200','http://localhost:3000','https://ltps80-prf2021.herokuapp.com/'];
 
 var corsOptions = {

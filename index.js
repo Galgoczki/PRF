@@ -92,5 +92,5 @@ app.use('/subrouter-pelda', require('./routes'))
 
 app.listen(3000, () => {
     console.log('A szerver elindult')
-    console.log(dbUrl)
+    console.log('titkos' + dbUrl)
 })

@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start":"node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Szabó Zoltán",
@@ -18,5 +19,8 @@
     "mongoose": "^6.3.2",
     "passport": "^0.5.2",
     "passport-local": "^1.0.0"
+  },
+    "engines":{
+      "node":"16.14"
   }
 }

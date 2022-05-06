@@ -29,6 +29,7 @@ var corsOptions = {
     'Origin', 'Accept']
   };
 
+const port = process.env.PORT || 3000
 app.use(cors(corsOptions));
 
 const dbUrl= 'mongodb+srv://'+ passWordJSON.mongo+'@cluster0.6o0hj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
@@ -90,7 +91,6 @@ app.use(express.static(path.join(__dirname,'public')))
 app.use('/', require('./routes'))
 app.use('/subrouter-pelda', require('./routes'))
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('A szerver elindult')
-    console.log('titkos' + dbUrl)
 })

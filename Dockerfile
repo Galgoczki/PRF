@@ -5,8 +5,8 @@ RUN apt-get -y install git
 RUN git config --global http.sslVerify false
 
 WORKDIR /opt
-RUN git clone https://github.com/ZooLeeCoding/2021-PRF-Sources.git
-WORKDIR /opt/2021-PRF-Sources/01intro
+RUN git clone https://github.com/Galgoczki/PRF.git
+WORKDIR /opt/PRF
 
 RUN npm install
 

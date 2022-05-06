@@ -31,7 +31,8 @@ var corsOptions = {
 
 app.use(cors(corsOptions));
 
-const dbUrl = 'mongodb://localhost:27017'
+const dbUrl= 'mongodb+srv://'+ passWordJSON.mongo+'@cluster0.6o0hj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+//const dbUrl = 'mongodb://localhost:27017'
 mongoose.connect(dbUrl)
 
 mongoose.connection.on('connected', () => { console.log('db connected') })

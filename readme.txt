@@ -1,3 +1,5 @@
+this read me issnt iformativ,dont need to look at
+
 npm install
 npm install mongoose
 npm install -g nodemon

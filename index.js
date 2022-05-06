@@ -15,7 +15,7 @@ const port = process.env.PORT || 3000
 
 const whitelist = ['https://ltps80-prf2021.web.app', 
 'https://ltps80-prf2021.firebaseapp.com', 
-'http://localhost:4200','http://localhost:3000','http://localhost:'+port,'https://ltps80-prf2021.herokuapp.com/'];
+'http://localhost:4200','http://localhost:3000','http://localhost:'+port,'https://ltps80-prf2021.herokuapp.com'];
 
 var corsOptions = {
     origin: function (origin, callback) {

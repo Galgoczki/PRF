@@ -1,6 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
-var passWordJSON = require('./password.json');
+//var passWordJSON = require('./password.json');
 const cors = require('cors')
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
@@ -32,7 +32,7 @@ var corsOptions = {
 const port = process.env.PORT || 3000
 app.use(cors(corsOptions));
 
-const dbUrl= 'mongodb+srv://'+ passWordJSON.mongo+'@cluster0.6o0hj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const dbUrl= 'mongodb+srv://'+ process.env.mongo+'@cluster0.6o0hj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 //const dbUrl = 'mongodb://localhost:27017'
 mongoose.connect(dbUrl)
 
@@ -79,7 +79,7 @@ passport.deserializeUser(function (user, done) {
     return done(null, user);
 });
 //ezzel a secrettel lesznek aláírva, hitelesítve a sütik, érdemes minél komplexebbet választani - vagyis nem ilyet, mint most én
-app.use(session({ secret: passWordJSON.sessionPassword, resave: false }));
+app.use(session({ secret: process.env.sessionPassword, resave: false }));
 app.use(passport.initialize())
 app.use(passport.session())
 

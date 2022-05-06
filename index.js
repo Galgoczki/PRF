@@ -32,7 +32,7 @@ var corsOptions = {
 
 app.use(cors(corsOptions));
 
-const dbUrl= 'mongodb+srv://'+ process.env.mongo+'@cluster0.6o0hj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const dbUrl= 'mongodb+srv://'+ process.env.MONGO+'@cluster0.6o0hj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 //const dbUrl = 'mongodb://localhost:27017'
 mongoose.connect(dbUrl)
 
@@ -79,7 +79,7 @@ passport.deserializeUser(function (user, done) {
     return done(null, user);
 });
 //ezzel a secrettel lesznek aláírva, hitelesítve a sütik, érdemes minél komplexebbet választani - vagyis nem ilyet, mint most én
-app.use(session({ secret: process.env.sessionPassword, resave: false }));
+app.use(session({ secret: process.env.SESSIONPASSWORD, resave: false }));
 app.use(passport.initialize())
 app.use(passport.session())
 

@@ -1,0 +1,13 @@
+<div class="content" role="main">
+    <h2>Olny for admins its not gonna work anybody else</h2>
+    <div>
+        <label>Item name</label>
+        <div>csak angol betü az engedélyezett(törlésnél a karakter kódját küldi át igy nem egyezik a szervernél</div>
+        <input type="text" id="item name" [(ngModel)]="nev">
+    </div>
+    <div>
+        <label>price</label>
+        <input type="number" id="price" [(ngModel)]="ar">
+    </div>
+    <button (click)="createItem()">Item</button>
+</div>
